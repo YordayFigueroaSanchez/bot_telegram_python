@@ -7,6 +7,10 @@ def help(update, context):
 
     update.message.reply_text('Help to play')
 
+def team(update, context):
+
+    update.message.reply_text('List of Team')
+
 if __name__ == '__main__':
 
     updater = Updater(token='1784474668:AAG6DffL1G2VBkzzMH1X74ZEBQGsii9i8-Y', use_context=True)
@@ -17,6 +21,8 @@ if __name__ == '__main__':
     dp.add_handler(CommandHandler('start', start))
 
     dp.add_handler(CommandHandler('help', help))
+
+    dp.add_handler(CommandHandler('team', team))
 
     updater.start_polling()
     updater.idle()
